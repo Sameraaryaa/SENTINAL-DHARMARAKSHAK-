@@ -191,13 +191,22 @@ export async function runAgent(
   }
   parsedRiskScore = Math.min(10, parsedRiskScore);
 
+  let finalFull = raw.full || '';
+  if (typeof finalFull !== 'string') {
+    try {
+      finalFull = JSON.stringify(finalFull, null, 2);
+    } catch {
+      finalFull = String(finalFull);
+    }
+  }
+
   const agentResult: AgentResult = {
     agentId,
     name: agent.name,
     category: agent.category,
     color: agent.color,
     bubble: raw.bubble || `${agent.name} complete`,
-    full: raw.full || '',
+    full: finalFull,
     confidence: raw.confidence || 50,
     riskScore: parsedRiskScore,
     flags: raw.flags || [],

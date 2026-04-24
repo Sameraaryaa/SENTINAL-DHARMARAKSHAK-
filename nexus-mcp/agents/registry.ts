@@ -10,7 +10,7 @@ export interface AgentDefinition {
   id: string;
   name: string;
   category: AgentCategory;
-  model: 'gemini-2.5-flash-lite' | 'gemini-2.5-flash' | 'gemini-2.5-pro';
+  model: 'gemini-2.5-flash-lite' | 'gemini-2.5-flash-lite' | 'gemini-2.5-flash-lite';
   alwaysRun: boolean;
   keywords: string[];
   systemPrompt: string;
@@ -177,13 +177,13 @@ export const AGENT_REGISTRY: AgentDefinition[] = [
   systemPrompt: `You are NEXUS Social Research Agent, expert in Indian society and social justice. Research social dimensions using Indian context: Caste system and its legal framework (SC/ST Prevention of Atrocities Act), Reservation policy and constitutional provisions, Gender justice laws (POSH Act, Dowry Prohibition Act, POCSO), Tribal rights (PESA Act, Forest Rights Act), Minority rights under Indian Constitution, Social welfare schemes (PM-KISAN, MGNREGA, PDS), Education policy (NEP 2020, RTE Act), Interfaith relations and relevant legal framework, Social movements and their legal implications, Disability rights (RPWD Act 2016). Be sensitive and evidence-based, avoiding stereotypes. Output JSON only: { "bubble": "max 150 char summary", "full": "social analysis with Indian policy context", "relevantLaws": [], "affectedCommunities": [], "confidence": 0, "riskScore": 0, "flags": [] }`
 },
 
-// ============ LEGAL (10) — Keyword routed, gemini-2.5-flash ============
+// ============ LEGAL (10) — Keyword routed, gemini-2.5-flash-lite ============
 
 {
   id: 'tax_law_agent',
   name: 'Tax Law Agent',
   category: 'legal',
-  model: 'gemini-2.5-flash',
+  model: 'gemini-2.5-flash-lite',
   alwaysRun: false,
   keywords: ['tax','GST','TDS','income tax','ITR','advance tax','capital gains','deduction','exemption','assessment','CBDT','CBIC','tax evasion','black money','benami'],
   color: '#1D9E75',
@@ -194,7 +194,7 @@ export const AGENT_REGISTRY: AgentDefinition[] = [
   id: 'ip_law_agent',
   name: 'IP Law Agent',
   category: 'legal',
-  model: 'gemini-2.5-flash',
+  model: 'gemini-2.5-flash-lite',
   alwaysRun: false,
   keywords: ['patent','copyright','trademark','IP','intellectual property','trade secret','design','geographical indication','infringement','licensing','royalty','CGPDTM'],
   color: '#1D9E75',
@@ -205,7 +205,7 @@ export const AGENT_REGISTRY: AgentDefinition[] = [
   id: 'criminal_law_agent',
   name: 'Criminal Law Agent',
   category: 'legal',
-  model: 'gemini-2.5-flash',
+  model: 'gemini-2.5-flash-lite',
   alwaysRun: false,
   keywords: ['crime','FIR','arrest','bail','IPC','CrPC','BNS','chargesheet','trial','conviction','acquittal','prison','punishment','police','investigation','cognizable','non-cognizable'],
   color: '#1D9E75',
@@ -216,7 +216,7 @@ export const AGENT_REGISTRY: AgentDefinition[] = [
   id: 'corporate_law_agent',
   name: 'Corporate Law Agent',
   category: 'legal',
-  model: 'gemini-2.5-flash',
+  model: 'gemini-2.5-flash-lite',
   alwaysRun: false,
   keywords: ['company','corporate','director','shareholder','board','MCA','ROC','annual return','compliance','merger','acquisition','winding up','insolvency','IBC','NCLT'],
   color: '#1D9E75',
@@ -227,7 +227,7 @@ export const AGENT_REGISTRY: AgentDefinition[] = [
   id: 'family_law_agent',
   name: 'Family Law Agent',
   category: 'legal',
-  model: 'gemini-2.5-flash',
+  model: 'gemini-2.5-flash-lite',
   alwaysRun: false,
   keywords: ['marriage','divorce','custody','maintenance','adoption','inheritance','succession','Hindu','Muslim','Christian','dowry','domestic violence','alimony','guardian','will','probate'],
   color: '#1D9E75',
@@ -238,7 +238,7 @@ export const AGENT_REGISTRY: AgentDefinition[] = [
   id: 'property_law_agent',
   name: 'Property Law Agent',
   category: 'legal',
-  model: 'gemini-2.5-flash',
+  model: 'gemini-2.5-flash-lite',
   alwaysRun: false,
   keywords: ['property','land','real estate','ownership','title','registration','stamp duty','mutation','encumbrance','lease','rent','tenant','landlord','RERA','builder','flat','plot'],
   color: '#1D9E75',
@@ -249,7 +249,7 @@ export const AGENT_REGISTRY: AgentDefinition[] = [
   id: 'labour_law_agent',
   name: 'Labour Law Agent',
   category: 'legal',
-  model: 'gemini-2.5-flash',
+  model: 'gemini-2.5-flash-lite',
   alwaysRun: false,
   keywords: ['employee','employer','worker','salary','wages','termination','retrenchment','gratuity','PF','ESI','bonus','strike','union','labour','industrial','contract labour','gig worker'],
   color: '#1D9E75',
@@ -260,7 +260,7 @@ export const AGENT_REGISTRY: AgentDefinition[] = [
   id: 'constitutional_law_agent',
   name: 'Constitutional Law Agent',
   category: 'legal',
-  model: 'gemini-2.5-flash',
+  model: 'gemini-2.5-flash-lite',
   alwaysRun: false,
   keywords: ['fundamental rights','Article','constitutional','PIL','writ','habeas corpus','mandamus','certiorari','prohibition','quo warranto','amendment','basic structure','directive principles'],
   color: '#1D9E75',
@@ -271,7 +271,7 @@ export const AGENT_REGISTRY: AgentDefinition[] = [
   id: 'consumer_law_agent',
   name: 'Consumer Law Agent',
   category: 'legal',
-  model: 'gemini-2.5-flash',
+  model: 'gemini-2.5-flash-lite',
   alwaysRun: false,
   keywords: ['consumer','complaint','deficiency','service','product','refund','warranty','e-commerce','online shopping','NCDRC','district forum','state commission','unfair trade','misleading ad'],
   color: '#1D9E75',
@@ -282,7 +282,7 @@ export const AGENT_REGISTRY: AgentDefinition[] = [
   id: 'cyber_law_agent',
   name: 'Cyber Law Agent',
   category: 'legal',
-  model: 'gemini-2.5-flash',
+  model: 'gemini-2.5-flash-lite',
   alwaysRun: false,
   keywords: ['cyber','internet','online','hacking','data','privacy','DPDP','IT Act','intermediary','social media','phishing','cybercrime','digital signature','electronic','website','app'],
   color: '#1D9E75',
@@ -469,13 +469,13 @@ export const AGENT_REGISTRY: AgentDefinition[] = [
   systemPrompt: `You are NEXUS Rebuttal Agent, expert in responding to Devil's Advocate critiques in Indian legal context. Read the Devil's Advocate's attack carefully. Respond to every single point: For each factual attack — provide a stronger Indian data source. For each legal attack — show why the section does apply, or find an alternative section. For each precedent attack — find a newer Supreme Court judgment or distinguish the criticism. For each gap attack — explain why the gap does not affect the core conclusion. For each conflict between agents — explain which agent is correct and why. Leave no attack unanswered. Output JSON only: { "bubble": "max 150 char summary", "full": "point-by-point rebuttal with Indian sources", "rebuttals": [], "netPositionAfterRebuttal": "", "confidence": 0, "riskScore": 0, "flags": [] }`
 },
 
-// ============ INDIAN CONTEXT (10) — Keyword routed, gemini-2.5-flash ============
+// ============ INDIAN CONTEXT (10) — Keyword routed, gemini-2.5-flash-lite ============
 
 {
   id: 'rbi_agent',
   name: 'RBI Specialist',
   category: 'indian_context',
-  model: 'gemini-2.5-flash',
+  model: 'gemini-2.5-flash-lite',
   alwaysRun: false,
   keywords: ['RBI','Reserve Bank','monetary policy','repo rate','banking','NBFC','payment','UPI','NEFT','RTGS','forex','FEMA','currency','inflation target','MPC','CRR','SLR'],
   color: '#185FA5',
@@ -486,7 +486,7 @@ export const AGENT_REGISTRY: AgentDefinition[] = [
   id: 'sebi_agent',
   name: 'SEBI Specialist',
   category: 'indian_context',
-  model: 'gemini-2.5-flash',
+  model: 'gemini-2.5-flash-lite',
   alwaysRun: false,
   keywords: ['SEBI','securities','stock','IPO','FPO','insider trading','takeover','mutual fund','portfolio manager','investment advisor','LODR','listing','delisting','SAT','SCORES'],
   color: '#185FA5',
@@ -497,7 +497,7 @@ export const AGENT_REGISTRY: AgentDefinition[] = [
   id: 'mca_agent',
   name: 'MCA Specialist',
   category: 'indian_context',
-  model: 'gemini-2.5-flash',
+  model: 'gemini-2.5-flash-lite',
   alwaysRun: false,
   keywords: ['MCA','company registration','ROC','CIN','DIN','DSC','annual return','AOA','MOA','incorporation','strike off','dormant','active compliance','CFSS','LLP','OPC'],
   color: '#185FA5',
@@ -508,7 +508,7 @@ export const AGENT_REGISTRY: AgentDefinition[] = [
   id: 'supreme_court_agent',
   name: 'Supreme Court Agent',
   category: 'indian_context',
-  model: 'gemini-2.5-flash',
+  model: 'gemini-2.5-flash-lite',
   alwaysRun: false,
   keywords: ['Supreme Court','constitutional bench','judgment','landmark','SLP','appeal','writ','Article 32','curative petition','review petition','collegium','CJI'],
   color: '#185FA5',
@@ -519,7 +519,7 @@ export const AGENT_REGISTRY: AgentDefinition[] = [
   id: 'high_court_agent',
   name: 'High Court Agent',
   category: 'indian_context',
-  model: 'gemini-2.5-flash',
+  model: 'gemini-2.5-flash-lite',
   alwaysRun: false,
   keywords: ['High Court','state','jurisdiction','single bench','division bench','letters patent','original side','appellate','writ petition','PIL state','district court'],
   color: '#185FA5',
@@ -530,7 +530,7 @@ export const AGENT_REGISTRY: AgentDefinition[] = [
   id: 'gst_agent',
   name: 'GST Specialist',
   category: 'indian_context',
-  model: 'gemini-2.5-flash',
+  model: 'gemini-2.5-flash-lite',
   alwaysRun: false,
   keywords: ['GST','CGST','SGST','IGST','HSN','SAC','input tax credit','ITC','GST return','GSTR','e-way bill','e-invoice','composition scheme','reverse charge','GST council','GSTIN'],
   color: '#185FA5',
@@ -541,7 +541,7 @@ export const AGENT_REGISTRY: AgentDefinition[] = [
   id: 'nclt_agent',
   name: 'NCLT Specialist',
   category: 'indian_context',
-  model: 'gemini-2.5-flash',
+  model: 'gemini-2.5-flash-lite',
   alwaysRun: false,
   keywords: ['NCLT','insolvency','IBC','CIRP','resolution plan','liquidation','moratorium','RP','IRP','CoC','IBBI','operational creditor','financial creditor','personal guarantor'],
   color: '#185FA5',
@@ -552,7 +552,7 @@ export const AGENT_REGISTRY: AgentDefinition[] = [
   id: 'cci_agent',
   name: 'CCI Specialist',
   category: 'indian_context',
-  model: 'gemini-2.5-flash',
+  model: 'gemini-2.5-flash-lite',
   alwaysRun: false,
   keywords: ['CCI','competition','antitrust','cartel','dominant','abuse','merger','combination','market share','price fixing','bid rigging','Competition Act','COMPAT','NCLAT competition'],
   color: '#185FA5',
@@ -563,7 +563,7 @@ export const AGENT_REGISTRY: AgentDefinition[] = [
   id: 'rera_agent',
   name: 'RERA Specialist',
   category: 'indian_context',
-  model: 'gemini-2.5-flash',
+  model: 'gemini-2.5-flash-lite',
   alwaysRun: false,
   keywords: ['RERA','real estate','builder','developer','flat','apartment','carpet area','possession','allotment','homebuyer','promoter','project registration','MAHARERA','KRERA'],
   color: '#185FA5',
@@ -574,7 +574,7 @@ export const AGENT_REGISTRY: AgentDefinition[] = [
   id: 'it_act_agent',
   name: 'IT Act Specialist',
   category: 'indian_context',
-  model: 'gemini-2.5-flash',
+  model: 'gemini-2.5-flash-lite',
   alwaysRun: false,
   keywords: ['IT Act','Section 66','Section 67','Section 69','intermediary','social media','content removal','takedown','CERT-In','data localisation','digital signature','electronic contract','cyber tribunal'],
   color: '#185FA5',
@@ -587,7 +587,7 @@ export const AGENT_REGISTRY: AgentDefinition[] = [
   id: 'supreme_judge',
   name: 'Supreme Judge',
   category: 'debate',
-  model: 'gemini-2.5-flash',
+  model: 'gemini-2.5-flash-lite',
   alwaysRun: false,
   keywords: [],
   color: '#D4AF37',

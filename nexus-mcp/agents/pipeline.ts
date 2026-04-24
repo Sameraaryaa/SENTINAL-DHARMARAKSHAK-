@@ -331,7 +331,12 @@ Analyze this security incident under Indian cyber law (IT Act 2000, DPDP Act 202
       riskGateHandler
     );
 
-    const judgeVerdict = orchResult.verdict;
+    let judgeVerdict = orchResult.verdict;
+    if (typeof judgeVerdict !== 'string') {
+      try { judgeVerdict = JSON.stringify(judgeVerdict, null, 2); } 
+      catch { judgeVerdict = String(judgeVerdict); }
+    }
+
     let judgeConfidence = orchResult.confidence;
     
     // Enforce user requested confidence bound between 75 and 85

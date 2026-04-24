@@ -1,0 +1,46 @@
+:root {
+  --bg: #07080e;
+  --floor: #1a1425;
+  --wood: #2a1f14;
+  --wood-light: #3d2e1f;
+  --wood-dark: #1a1208;
+  --research: #3b82f6;
+  --legal: #a855f7;
+  --devil: #ef4444;
+  --judge: #f59e0b;
+  --success: #22c55e;
+  --text: #e4e4ef;
+  --text-dim: #8888a4;
+  --text-muted: #55556a;
+  --font: "Inter", -apple-system, sans-serif;
+  --mono: "JetBrains Mono", monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body, #root { height: 100%; overflow: hidden; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Animations */
+@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
+@keyframes blink { 0%,100% { opacity:1; } 50% { opacity:0; } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes fadeIn { from { opacity:0; transform: translateY(10px); } to { opacity:1; transform: translateY(0); } }
+@keyframes breathe { 0%,100% { transform: scaleY(1); } 50% { transform: scaleY(1.015); } }
+@keyframes talk { 0% { d: path("M 8,0 Q 12,3 16,0"); } 50% { d: path("M 8,0 Q 12,8 16,0"); } 100% { d: path("M 8,0 Q 12,3 16,0"); } }
+@keyframes gesture-l { 0%,100% { transform: rotate(0deg); } 30% { transform: rotate(-30deg); } 60% { transform: rotate(10deg); } }
+@keyframes gesture-r { 0%,100% { transform: rotate(0deg); } 40% { transform: rotate(25deg); } 70% { transform: rotate(-15deg); } }
+@keyframes gavel-strike { 0% { transform: rotate(-50deg); } 40% { transform: rotate(5deg); } 100% { transform: rotate(0deg); } }
+@keyframes particle-float {
+  0% { opacity:0; transform: translateY(0) scale(0); }
+  15% { opacity:0.6; transform: translateY(-30px) scale(1); }
+  100% { opacity:0; transform: translateY(-250px) scale(0.3); }
+}
+@keyframes gradShift { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+
+.typing::after { content: "▊"; animation: blink 0.6s infinite; color: var(--text); margin-left: 2px; }
